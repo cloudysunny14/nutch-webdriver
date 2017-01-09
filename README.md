@@ -2,7 +2,7 @@ nutch-webdriver
 ================
 
 Nutch plugins for working with Firefox Webdriver using Selenium.
-It made to work with Hadoop 2.x series pseudo-dispersion and fully distributed.
+It made to work with Hadoop 2.x series pseudo-distributed and full-distributed.
 Also, It made with reference to [nutch-selenium](https://github.com/momer/nutch-selenium).
 
 This plugin allows you to fetch websites that Ajax page, while relying on the rest of the awesome Nutch stack!
