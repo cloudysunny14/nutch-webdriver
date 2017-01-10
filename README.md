@@ -23,13 +23,23 @@ sudo apt-get install xorg synaptic xvfb gtk2-engines-pixbuf xfonts-cyrillic xfon
     xfonts-75dpi xfonts-base xfonts-scalable freeglut3-dev dbus-x11 openbox x11-xserver-utils \
     libxrender1 cabextract
 ```
-C) Set a display for Xvfb, so that firefox believes a display is connected
+
+C) Install geckodriver
+
+Download the binary of [geckodriver](https://github.com/mozilla/geckodriver/releases)
+
+```
+wget https://github.com/mozilla/geckodriver/releases/download/v0.12.0/geckodriver-v0.12.0-linux64.tar.gz
+tar xvfz geckodriver-v0.12.0-linux64.tar.gz && mv geckodriver /usr/bin/
+```
+
+D) Set a display for Xvfb, so that firefox believes a display is connected
 ```
 sudo /usr/bin/Xvfb :11 -screen 0 1024x768x24 &
 sudo export DISPLAY=:11
 ```
 
-D) Launch Firefox with marionette
+E) Launch GeckoDriver
 ```
 geckodriver -b /usr/bin/firefox -p 4444
 ```
